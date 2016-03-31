@@ -25,20 +25,14 @@ public class GoodsController {
 		this.goodsService = goodsService;
 	}
 
-	@RequestMapping("/goods")
+	/*@RequestMapping("/goods")
 	public String showGoods(Model model) {
 
 		List<Goods> goods = goodsService.getCurrent();
 		model.addAttribute("goods", goods);
 
 		return "goods";
-	}
-
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String showTest(Model model, @RequestParam("id") String id) {
-		System.out.println("Id is " + id);
-		return "home";
-	}
+	}*/
 
 	@RequestMapping("/addgoods")
 	public String addGoods(Model model) {
@@ -52,7 +46,10 @@ public class GoodsController {
 			return "addgoods";
 		}
 
-		goodsService.addGoods(goods);
+		if(!goodsService.addGoods(goods)){
+			model.addAttribute("erro", "greda");
+			return "addgoods";
+		}
 
 		return "goodsadded";
 	}
@@ -61,6 +58,16 @@ public class GoodsController {
 	public String deleteGoods(Model model, @RequestParam("id") int id) {
 		goodsService.delete(id);
 		return "deleted";
+	}
+
+	@RequestMapping(value = "/change", method = RequestMethod.GET)
+	public String changeAmount(Model model, @RequestParam("id") int id, @RequestParam("amount") int amount) {
+
+		Goods goods = goodsService.getSpecificGoods(id);
+		goods.setAmount(amount);
+		goodsService.update(goods);
+
+		return "changed";
 	}
 
 }

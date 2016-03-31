@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="refresh" content="0; URL='http://localhost:8080/stockmanager/'" />
 <title>Insert title here</title>
 </head>
 <body>
-Goods is added : <a href="${pageContext.request.contextPath}/goods">Click</a>
+Goods is added : <br>
+<a href="${pageContext.request.contextPath}/">Click to view all stocks</a><br>
+<a href="${pageContext.request.contextPath}/addgoods">Click to add new stock</a>
+
 </body>
 </html>

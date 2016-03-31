@@ -8,7 +8,7 @@ public class Goods {
 	private int id;
 
 	@NotNull(message = "Name should not be empty!")
-	@Size(min = 3, max = 17, message = "Name must be between 3 and 17 characters!")
+	@Size(min = 1, max = 30, message = "Name must be between 1 and 30 characters!")
 	private String name;
 
 	@NotNull(message = "Amount should not be empty")

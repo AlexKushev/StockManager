@@ -22,12 +22,20 @@ public class GoodsService {
 		return goodsDAO.getGoods();
 	}
 
-	public void addGoods(Goods goods) {
-		goodsDAO.create(goods);
+	public boolean addGoods(Goods goods) {
+		return goodsDAO.create(goods);
 	}
 
 	public void delete(int id) {
 		goodsDAO.delete(id);
+	}
+
+	public void update(Goods goods) {
+		goodsDAO.update(goods);
+	}
+
+	public Goods getSpecificGoods(int id) {
+		return goodsDAO.getGoods(id);
 	}
 
 }

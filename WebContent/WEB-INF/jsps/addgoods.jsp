@@ -23,16 +23,26 @@
 			<tr>
 				<td class="label">Amount</td>
 				<td><sf:input path="amount" id="amount" name="amount"
-						type="number" min="1" max="10" /><br /> <sf:errors path="amount"
+						type="number" min="1" /><br /> <sf:errors path="amount"
 						cssClass="error"></sf:errors></td>
 			</tr>
 			<tr>
-				<td><input value="Add new object" type="submit" /></td>
+				<td><input value="Add new object" type="submit" onclick="showError()" /></td>
+				<td><input type="button"
+				onclick="location.href='${pageContext.request.contextPath}/';" value="Show goods" /></td>
 			</tr>
 
 		</table>
 
 	</sf:form>
+	
+	
+	<script>
+		function showError() {
+			alert('This iteam is already in the database.');
+		}
+
+	</script>
 
 </body>
 </html>

@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-The object was deleted!
+The amount was changed.
 </body>
 </html>

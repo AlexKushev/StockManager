@@ -38,9 +38,12 @@ td#name {
 	text-align: left;
 }
 
+input {
+	text-transform: uppercase;
+}
+
 input[type=button] {
 	margin-left: 15px;
 	margin-right: 15px;
 	margin-bottom: 2px;
-	
 }

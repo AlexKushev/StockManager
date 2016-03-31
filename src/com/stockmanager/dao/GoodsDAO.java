@@ -61,14 +61,42 @@ public class GoodsDAO {
 		});
 	}
 
+	public Goods getGoods(String name) {
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("name", name);
+
+		return jdbc.queryForObject("select * from goods where name=:name", params, new RowMapper<Goods>() {
+
+			public Goods mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+				Goods goods = new Goods();
+
+				goods.setId(rs.getInt("id"));
+				goods.setName(rs.getString("name"));
+				goods.setAmount(rs.getInt("amount"));
+
+				return goods;
+			}
+
+		});
+	}
+
 	public boolean create(Goods goods) {
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(goods);
-		return jdbc.update("insert into goods (name, amount) values (:name, :amount)", params) == 1;
+		Goods goods2 = null;
+		try {
+			goods2 = getGoods(goods.getName());
+		} catch (Exception e) {
+			if (goods2 == null) {
+				return jdbc.update("insert into goods (name, amount) values (:name, :amount)", params) == 1;
+			}
+		}
+		return false;
 	}
 
 	public boolean update(Goods goods) {
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(goods);
-		return jdbc.update("update goods set name=:name, amount=:amount", params) == 1;
+		return jdbc.update("update goods set name=:name, amount=:amount where id=:id", params) == 1;
 	}
 
 	public boolean delete(int id) {
