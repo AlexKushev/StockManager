@@ -18,11 +18,13 @@
 	<table class=goods>
 
 		<tr>
+			<td>ID</td>
 			<td>Name</td>
 			<td>Amount</td>
 		</tr>
 		<c:forEach var="object" items="${goods}">
 			<tr>
+				<td id="id"><c:out value="${object.id }"></c:out></td>
 				<td id="name"><c:out value="${object.name}"></c:out></td>
 				<td id="amount"><c:out value="${object.amount}"></c:out></td>
 				<td id="new_amount"><input type="number" min="1"
@@ -30,7 +32,7 @@
 				<td><input type="button"
 					onclick="location.href='${pageContext.request.contextPath}/change?id=${object.id }&amount=' + myFunction(${object.id });"
 					value="Change Amount" /></td>
-				<td><input type="button"
+				<td><input type="button" id="del_btn"
 					onclick="location.href='${pageContext.request.contextPath}/delete?id=${object.id }';"
 					value="Delete" /></td>
 			</tr>
@@ -41,7 +43,6 @@
 			<td><input type="button"
 				onclick="location.href='${pageContext.request.contextPath}/addgoods';"
 				value="Add new item" /></td>
-
 		</tr>
 	</table>
 
@@ -52,16 +53,19 @@
 			var a = document.getElementById(test).value;
 			if(a == null || a == ''){
      			 alert('You should enter new amount value.');
-     			 return;
+     			 window.onbeforeunload = function(){
+            return 'Are you sure you want to leave?';
+        };
 			} else {
 				return a;
 			}
 		};
 		
+		
 	</script>
 
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
 
 </body>

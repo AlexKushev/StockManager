@@ -1,5 +1,9 @@
 C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\models\Goods.java
+C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\models\User.java
 C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\dao\GoodsDAO.java
+C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\service\UserService.java
+C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\controllers\LoginController.java
+C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\dao\UserDAO.java
 C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\service\GoodsService.java
 C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\controllers\DatabaseErrorHandler.java
 C:\Users\User\springWorkspace\stockmanager\src\com\stockmanager\controllers\GoodsController.java

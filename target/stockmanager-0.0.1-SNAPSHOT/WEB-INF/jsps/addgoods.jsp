@@ -27,7 +27,7 @@
 						cssClass="error"></sf:errors></td>
 			</tr>
 			<tr>
-				<td><input value="Add new object" type="submit" onclick="showError()" /></td>
+				<td><input value="Add new object" type="submit" /></td>
 				<td><input type="button"
 				onclick="location.href='${pageContext.request.contextPath}/';" value="Show goods" /></td>
 			</tr>
@@ -36,13 +36,6 @@
 
 	</sf:form>
 	
-	
-	<script>
-		function showError() {
-			alert('This iteam is already in the database.');
-		}
-
-	</script>
 
 </body>
 </html>

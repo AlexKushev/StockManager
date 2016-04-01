@@ -20,6 +20,11 @@
 	color: red;
 }
 
+.valid {
+	font-size: small;
+	color: green;
+}
+
 table.goods {
 	padding: 20px;
 	margin: 10px;
@@ -38,7 +43,7 @@ td#name {
 	text-align: left;
 }
 
-input {
+input#name {
 	text-transform: uppercase;
 }
 
@@ -46,4 +51,9 @@ input[type=button] {
 	margin-left: 15px;
 	margin-right: 15px;
 	margin-bottom: 2px;
+}
+
+p.loginerror {
+	color: red;
+	font-size: medium;
 }
