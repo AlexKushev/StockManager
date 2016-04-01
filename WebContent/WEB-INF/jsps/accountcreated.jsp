@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="refresh" content="0; URL='http://localhost:8080/stockmanager/login'" />
 <title>Insert title here</title>
 </head>
 <body>

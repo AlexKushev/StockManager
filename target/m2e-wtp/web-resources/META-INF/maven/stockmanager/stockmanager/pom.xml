@@ -112,5 +112,10 @@
   		<artifactId>spring-security-config</artifactId>
   		<version>4.0.4.RELEASE</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.security</groupId>
+  		<artifactId>spring-security-crypto</artifactId>
+  		<version>4.0.4.RELEASE</version>
+  	</dependency>
   </dependencies>
 </project>
