@@ -1,0 +1,9 @@
+com\stockmanager\controllers\DatabaseErrorHandler.class
+com\stockmanager\dao\GoodsDAO$1.class
+com\stockmanager\controllers\HomeController.class
+com\stockmanager\dao\GoodsDAO$2.class
+com\stockmanager\dao\GoodsDAO$3.class
+com\stockmanager\dao\GoodsDAO.class
+com\stockmanager\models\Goods.class
+com\stockmanager\controllers\GoodsController.class
+com\stockmanager\service\GoodsService.class

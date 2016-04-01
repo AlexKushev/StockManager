@@ -1,7 +1,5 @@
 package com.stockmanager.controllers;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +23,6 @@ public class GoodsController {
 		this.goodsService = goodsService;
 	}
 
-	/*@RequestMapping("/goods")
-	public String showGoods(Model model) {
-
-		List<Goods> goods = goodsService.getCurrent();
-		model.addAttribute("goods", goods);
-
-		return "goods";
-	}*/
-
 	@RequestMapping("/addgoods")
 	public String addGoods(Model model) {
 		model.addAttribute("goods", new Goods());
@@ -47,7 +36,6 @@ public class GoodsController {
 		}
 
 		if(!goodsService.addGoods(goods)){
-			model.addAttribute("erro", "greda");
 			return "addgoods";
 		}
 

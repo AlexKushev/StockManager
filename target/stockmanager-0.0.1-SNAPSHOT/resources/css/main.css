@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+.formtable {
+	width: 600px;
+	padding: 10px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#name {
+	width: 200px;
+}
+
+#amount {
+	width: 30px;
+}
+
+.error {
+	font-size: small;
+	color: red;
+}
+
+table.goods {
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid black;
+}
+
+td {
+	text-transform: uppercase;
+}
+
+td#amount {
+	text-align: center;
+}
+
+td#name {
+	text-align: left;
+}
+
+input {
+	text-transform: uppercase;
+}
+
+input[type=button] {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 2px;
+}
